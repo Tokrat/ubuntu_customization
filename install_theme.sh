@@ -11,5 +11,6 @@ cd Orchis-theme
 sudo ./install.sh
 
 cd $DIR/theme
+mkdir -p ~/.local/share/gnome-shell/extensions
 cp -r ./gnome-extension/*  ~/.local/share/gnome-shell/extensions
 dconf load / < gnome_settings.dconf
