@@ -1,15 +1,35 @@
-#!/usr/bin/env bash
+#!/bin/sh
+
+echo '\n >> Installing software'
 
 sudo apt update
-sudo apt install -y snapd discord flameshot chromium-browser
+sudo apt install -y snapd flameshot barrier
 
-# Barrier
-echo '> Installing Barrier'
-sudo snap install barrier
-
-# VS CODE
+# VS Code
 echo '> Installing VS Code'
-sudo snap install code
+sudo snap install code --classic
 
-# VS Code extensions
-echo '    > For VS Code preference, install plugin "Settings Sync" and download from git gist'
+# Opera
+echo '> Installing Opera'
+sudo snap install opera
+
+# Discord
+echo '> Installing Discord'
+sudo snap install discord
+
+# Slack
+echo '> Installing Slack'
+sudo snap install slack
+
+# Whatsapp
+echo '> Installing Whatsapp'
+sudo snap install whatsapp-for-linux
+
+# Spotify
+echo '> Installing Spotify'
+sudo snap install spotify
+
+
+# # Steam
+# echo '> Installing Steam'
+# sudo apt install -y steam
