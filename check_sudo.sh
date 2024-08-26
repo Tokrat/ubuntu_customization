@@ -4,7 +4,7 @@ if [ -f "/.dockerenv" ]; then
     sudo -v
     if [ $? -ne 0 ]; then
         echo "\n>> Installing Sudo\n"
-        apt-get update && apt-get install -y apt-utils sudo
+        apt update && apt install -y apt-utils sudo
         sudo -v
         if [ $? -ne 0 ]; then
             echo "\n>> Fail to install Sudo, exiting..."

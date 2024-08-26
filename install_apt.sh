@@ -2,7 +2,7 @@
 
 echo '\n >> Installing standard packages'
 
-sudo apt-get -y update && sudo apt-get install -y \
-    zsh git curl wget \
+sudo apt -y update && sudo apt install -y \
+    zsh git curl wget caffeine \
     clang-format clang-tidy \
     cmake libgtest-dev

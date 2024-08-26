@@ -16,15 +16,24 @@ cd ubuntu_customization && \
 ./full_install.sh
 ```
 
+After the installation you should set a few things manually:
+
+### 1.1. Git user
+
+```bash
+git config --global user.email "youradresse"
+git config --global user.name "yourname"
+```
+
 ## 2. Partial install
 
-### Standard packages
+### 2.1. Standard packages
 
 ```bash
 ./install_apt.sh
 ```
 
-### 2.1. ZSH
+### 2.2. ZSH
 
 Add ZSH with plugins + power10k
 
@@ -32,10 +41,22 @@ Add ZSH with plugins + power10k
 ./install_zsh.sh
 ```
 
-### 2.2. Softwares
+### 2.3. Softwares
 
 ```bash
 ./install_software.sh
+```
+
+### 2.4. Docker
+
+```bash
+./install_docker.sh
+```
+
+### 2.5. 4 Theme
+
+```bash
+./install_theme.sh
 ```
 
 ## 3. Optional
@@ -54,4 +75,20 @@ Create a Key (Github / Gitlab)
 ssh-keygen -t rsa -b 4096 -C "github"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
+```
+
+## 5. Update GNOME configuration
+
+> Run the commands from this folder
+
+Save the current configuration
+
+```bash
+dconf dump / > ./theme/gnome_settings.dconf
+```
+
+Load the configuration
+
+```bash
+dconf load / < ./theme/gnome_settings.dconf
 ```

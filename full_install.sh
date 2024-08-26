@@ -14,6 +14,9 @@ sh $THISDIR/install_docker.sh
 # Install all the software
 sh $THISDIR/install_software.sh
 
+# Install Theme
+sh $THISDIR/install_theme.sh
+
 # Install ZSH
 # >> This has to be done last since it changes the shell
 sh $THISDIR/install_zsh.sh

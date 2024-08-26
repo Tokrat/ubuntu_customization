@@ -2,9 +2,11 @@
 
 echo '\n >> Installing zsh'
 
+THISDIR="$(dirname $(readlink -f $0))"
+
 # Install dependencies
-sudo apt-get -y update \
-    && sudo apt-get install -y zsh git curl wget autojump
+sudo apt -y update \
+    && sudo apt install -y zsh git curl wget autojump
 
 # Install oh my zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended"
@@ -12,8 +14,8 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 # Install powerlevel10k theme
 # Font
 mkdir -p ~/.fonts/m
-if [ -d "./zsh/fonts/" ]; then
-    cp -p ./zsh/fonts/* ~/.fonts/m
+if [ -d "$THISDIR/zsh/fonts/" ]; then
+    cp -p $THISDIR/zsh/fonts/* ~/.fonts/m
     fc-cache -f -v
 else
     echo "Font directory not found. Skipping font installation."
@@ -26,9 +28,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Copy all the settings
-if [ -f "./zsh/zshrc" ] && [ -f "./zsh/p10k.zsh" ]; then
-    cp ./zsh/zshrc ~/.zshrc
-    cp ./zsh/p10k.zsh ~/.p10k.zsh
+if [ -f "$THISDIR/zsh/zshrc" ] && [ -f "$THISDIR/zsh/p10k.zsh" ]; then
+    cp $THISDIR/zsh/zshrc ~/.zshrc
+    cp $THISDIR/zsh/p10k.zsh ~/.p10k.zsh
 else
     echo "Configuration files not found. Skipping config copy."
 fi
