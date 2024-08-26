@@ -14,6 +14,13 @@ git clone https://github.com/vinceliuice/Orchis-theme.git
 cd Orchis-theme
 ./install.sh -t teal -c dark
 
+# Install Sweet theme
+cd /tmp
+git clone https://github.com/EliverLara/Sweet.git
+sudo mv Sweet /usr/share/themes/
+gsettings set org.gnome.desktop.interface gtk-theme "Sweet"
+gsettings set org.gnome.desktop.wm.preferences theme "Sweet"
+
 # Install Candy icons
 wget https://github.com/EliverLara/candy-icons/archive/refs/heads/master.zip -O candy-icons.zip
 sudo unzip candy-icons.zip -d /usr/share/icons/

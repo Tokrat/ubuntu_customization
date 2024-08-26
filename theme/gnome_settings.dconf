@@ -30,7 +30,7 @@ word-size=64
 active-view='month'
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='display'
 window-state=(1519, 1244, false)
 
 [org/gnome/deja-dup]
@@ -80,9 +80,10 @@ clock-show-weekday=true
 color-scheme='prefer-dark'
 cursor-theme='whiteglass'
 font-name='Poppins Light 11'
-gtk-theme='Yaru-blue-dark'
+gtk-theme='Sweet'
 icon-theme='candy-icons'
 show-battery-percentage=true
+text-scaling-factor=0.90000000000000002
 
 [org/gnome/desktop/notifications]
 application-children=['firefox-firefox', 'apport-gtk', 'org-gnome-nautilus', 'discord-discord', 'slack-slack', 'io-snapcraft-sessionagent', 'whatsapp-linux-app-whatsapp-linux-app', 'spotify-spotify', 'code-code']
@@ -114,6 +115,12 @@ application-id='spotify_spotify.desktop'
 [org/gnome/desktop/notifications/application/whatsapp-linux-app-whatsapp-linux-app]
 application-id='whatsapp-linux-app_whatsapp-linux-app.desktop'
 
+[org/gnome/desktop/peripherals/keyboard]
+numlock-state=true
+
+[org/gnome/desktop/peripherals/touchpad]
+two-finger-scrolling-enabled=true
+
 [org/gnome/desktop/privacy]
 old-files-age=uint32 30
 recent-files-max-age=-1
@@ -129,11 +136,15 @@ secondary-color='#000000'
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 
 [org/gnome/desktop/session]
-idle-delay=uint32 300
+idle-delay=uint32 600
 
 [org/gnome/desktop/sound]
 event-sounds=true
 theme-name='__custom'
+
+[org/gnome/desktop/wm/preferences]
+num-workspaces=4
+theme='Sweet'
 
 [org/gnome/evince/default]
 continuous=true
@@ -180,6 +191,7 @@ sort-col=0
 sort-order=0
 
 [org/gnome/mutter]
+dynamic-workspaces=true
 edge-tiling=false
 workspaces-only-on-primary=false
 
@@ -196,7 +208,7 @@ search-filter-time-type='last_modified'
 initial-size=(1196, 896)
 
 [org/gnome/portal/filechooser/snap.code]
-last-folder-path='/home/tokrat/librairies/stackmill'
+last-folder-path='/home/tokrat/libraries/ubuntu_customization'
 
 [org/gnome/portal/filechooser/snap.opera]
 last-folder-path='/home/tokrat/Téléchargements'
@@ -205,8 +217,8 @@ last-folder-path='/home/tokrat/Téléchargements'
 last-folder-path='/media/tokrat/Games/Steam'
 
 [org/gnome/settings-daemon/plugins/power]
-sleep-inactive-ac-timeout=3600
-sleep-inactive-ac-type='nothing'
+sleep-inactive-ac-timeout=5400
+sleep-inactive-ac-type='suspend'
 
 [org/gnome/shell]
 command-history=['r']
@@ -224,7 +236,8 @@ dock-fixed=false
 dock-position='BOTTOM'
 extend-height=false
 isolate-workspaces=true
-show-mounts=true
+multi-monitor=true
+show-mounts=false
 show-mounts-network=true
 show-mounts-only-mounted=false
 show-trash=false
@@ -239,7 +252,7 @@ overridden-settings={'org.gnome.mutter.edge-tiling': <@mb nothing>, 'org.gnome.m
 tiling-popup-all-workspace=false
 
 [org/gnome/shell/extensions/user-theme]
-name='Orchis-Dark'
+name='Orchis-Teal-Dark-Compact'
 
 [org/gnome/shell/world-clocks]
 locations=@av []
@@ -273,3 +286,6 @@ sort-order='ascending'
 type-format='category'
 window-position=(59, 44)
 window-size=(1203, 902)
+
+[system/locale]
+region='fr_FR.UTF-8'

@@ -25,6 +25,16 @@ git config --global user.email "youradresse"
 git config --global user.name "yourname"
 ```
 
+### 1.2. SSH Key
+
+Create a Key (Github / Gitlab)
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "github"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+```
+
 ## 2. Partial install
 
 ### 2.1. Standard packages
@@ -67,17 +77,7 @@ Add ZSH with plugins + power10k
 ./install_ros.sh
 ```
 
-## 4. SSH Key
-
-Create a Key (Github / Gitlab)
-
-```bash
-ssh-keygen -t rsa -b 4096 -C "github"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
-```
-
-## 5. Update GNOME configuration
+## 4. Update GNOME configuration
 
 > Run the commands from this folder
 
