@@ -41,3 +41,6 @@ $THISDIR/install_font.sh
 
 # Load gnome settings
 dconf load / < $THISDIR/theme/gnome_settings.dconf
+
+# GRUB theme
+wget -O- https://github.com/shvchk/fallout-grub-theme/raw/master/install.sh | bash -s -- --lang French
